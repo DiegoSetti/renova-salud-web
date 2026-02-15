@@ -1,0 +1,220 @@
+/* Variables de Color - AJUSTA AQUÍ LOS COLORES DE INSTAGRAM */
+:root {
+    --primary-color: #2E8B57; /* Verde "Renova" (ejemplo: SeaGreen) */
+    --secondary-color: #20B2AA; /* Verde agua claro */
+    --accent-color: #E0F2F1; /* Fondo muy claro */
+    --text-dark: #333333;
+    --text-light: #777777;
+    --white: #ffffff;
+    --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+ul { list-style: none; }
+
+/* Utilitarios */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-primary { background: var(--primary-color); color: var(--white); }
+.btn-primary:hover { background: #246d44; }
+
+.btn-secondary { background: transparent; border: 2px solid var(--primary-color); color: var(--primary-color); }
+.btn-secondary:hover { background: var(--primary-color); color: var(--white); }
+
+/* Header */
+.top-bar {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 10px 0;
+    font-size: 0.9rem;
+}
+.contact-info a { margin-right: 20px; color: var(--white); }
+.contact-info i { margin-right: 5px; }
+
+.main-header { background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px;
+}
+.logo h1 { font-size: 1.8rem; color: var(--text-dark); }
+.logo .highlight { color: var(--primary-color); }
+
+.main-nav ul { display: flex; gap: 30px; }
+.main-nav a { font-weight: 500; color: var(--text-dark); }
+.main-nav a:hover, .main-nav a.active { color: var(--primary-color); }
+.mobile-menu-icon { display: none; cursor: pointer; font-size: 1.5rem; }
+
+/* Hero */
+.hero {
+    background: linear-gradient(rgba(46, 139, 87, 0.1), rgba(46, 139, 87, 0.1)), url('https://via.placeholder.com/1920x600?text=Renova+Banner') no-repeat center center/cover;
+    padding: 100px 0;
+    text-align: center;
+}
+.hero h2 { font-size: 3rem; margin-bottom: 20px; color: var(--primary-color); }
+.hero p { font-size: 1.2rem; margin-bottom: 30px; color: var(--text-dark); }
+
+/* Secciones Generales */
+section { padding: 60px 0; }
+.section-title { text-align: center; font-size: 2.2rem; margin-bottom: 10px; color: var(--primary-color); }
+.section-subtitle { text-align: center; margin-bottom: 50px; color: var(--text-light); }
+
+/* Programa Renova */
+.program-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+.program-item {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.program-item h3 { margin-bottom: 15px; color: var(--primary-color); }
+
+/* Equipo Preview */
+.team-preview {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+.team-card-preview { text-align: center; }
+.fake-img {
+    width: 200px;
+    height: 200px;
+    background: #ddd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: #666;
+}
+.center-btn { text-align: center; }
+
+/* Footer */
+footer { background: #222; color: #ccc; padding-top: 50px; }
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding-bottom: 50px;
+}
+.footer-col h3 { color: var(--white); margin-bottom: 20px; }
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col a:hover { color: var(--primary-color); }
+.bottom-bar {
+    background: #111;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* WhatsApp Widget */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.3s;
+}
+.whatsapp-btn:hover { transform: scale(1.1); }
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+}
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+}
+.captcha-container { margin: 20px 0; }
+.btn-whatsapp {
+    background: #25D366;
+    color: white;
+    border: none;
+    width: 100%;
+}
+.btn-whatsapp:disabled { background: #ccc; cursor: not-allowed; }
+
+/* Formularios */
+.form-group { margin-bottom: 20px; text-align: left; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: bold; }
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .main-nav { display: none; } /* En una versión real agregarías toggle JS */
+    .hero h2 { font-size: 2rem; }
+    .mobile-menu-icon { display: block; }
+}
